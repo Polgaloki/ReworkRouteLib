@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+   }
+   
+   body {
+    height: 100%; /* Faz com que ambos tenham a altura da viewport */
+    overflow: hidden; /* Impede o scroll no body, pode ajustar conforme necessidade */
+     
+   }
+   
+   
+
+   nav.menu-lateral {
+    width: 90px;
+    height: 100%; /* Continua usando 100% da altura da viewport */
+    background-color: #333333;
+    padding: 50px 0 50px 1%;
+    box-shadow: 3px 0 0 #9e0c39;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden; /* Garante que o conteúdo extra não faça a barra lateral estender-se verticalmente */
+    transition: 1s;
+    z-index: 1000;
+}
+   
+nav.menu-lateral.expandir{
+       width: 300px;
+   }
+   
+   .btn-expandir{
+       width: 100%;
+       padding-left: 10px;
+       padding: 10px 10px;
+   }
+   
+   .btn-expandir > i{
+       color: #fbffe3;
+       font-size: 24px;
+       cursor: pointer;
+       
+   }
+   
+   ul{
+    height: 100%;
+    list-style-type: none;
+   }
+   
+   ul li.item-menu:hover{
+    background:#333333;
+    border-radius: 15px 0px 0px 15px
+    
+   }
+   
+   ul li.item-menu{ 
+       transition: 1s;
+       border-radius: 15px 0px 0px 15px
+   }
+   ul li.ativo{
+       background-color: #e21b5a;
+   }
+   
+   ul li.item-menu a{
+    color:#fbffe3;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 10px;
+    line-height: 40px;
+    
+   }
+   
+   ul li.item-menu a .txt-link{
+       margin-left: 70px;
+       transition: 1s;
+       opacity: 0;
+   }
+   nav.menu-lateral.expandir .txt-link{
+       margin-left: 40px;
+       opacity: 1;
+   }
+   
+   ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 5px;
+   }

@@ -1,0 +1,131 @@
+body {
+    background-color: #222831;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+h3 {
+    margin-top: 1em;
+}
+
+#map-container {
+    margin-left: 90px; /* 80px da largura da barra + 10px de espaço */
+    height: 100%;
+    width: calc(100% - 90px); /* Subtrai a margem esquerda do total para manter o layout responsivo */
+    position: relative; /* Ajuste conforme necessário */
+    z-index: 500; /* Menor que o menu lateral para manter-se sob o menu */
+}
+
+#map {
+    height: 100%;
+    width: 100%; /* Largura ajustada para dar margens laterais */
+    /* border-radius: 2em; Opção para arredondar os cantos */
+}
+
+
+.info-container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+}
+
+.info-container > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    height: 100%;
+    width: 15%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 5px;
+    text-align: center;
+}
+
+.limit-container {
+    display: flex;
+    flex-direction: row;
+    background-color: darkorange;
+}
+
+#file_container {
+    display: none;
+    /* display: flex; */
+    /* flex-direction: row; */
+    background-color: darkgreen;
+}
+
+#file_container > input {
+    margin-top: 10px;
+}
+
+#download {
+    background-color: darkblue;
+}
+
+#new-session-button {
+    background-color: darkred;
+}
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+}
+
+.select-container-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.select-container > select {
+    background-color: inherit;
+    height: 75%;
+    width: 60%;
+    margin-bottom: 1px;
+    border: 2px solid rgb(0, 66, 154);
+    color: white;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+
+.select-container > select::selection {
+    background-color: rgb(0, 74, 14);
+}
+
+
+.select-option-adder {
+    height: 10%;
+    width: 20%;
+    background-color: rgb(0, 66, 154);
+    padding: 2px;
+    text-align: center;
+    margin-top: 10px
+}
+
+
+.loading-animation {
+  width: 10%;
+  height: 37.5%;
+  border: 3px solid #ccc;
+  border-top-color: #888;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
