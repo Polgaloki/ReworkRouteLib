@@ -24,6 +24,16 @@
       transform: translateY(20px); /* Move para baixo */
     }
   }
+@keyframes icondown {
+    from {
+        top: -100px; /* Posição inicial acima da tela */
+        opacity: 0; /* Começa totalmente transparente */
+    }
+    to {
+        top: 30px; /* Posição final na tela */
+        opacity: 1; /* Termina totalmente visível */
+    }
+}
 
 *{
 
@@ -66,28 +76,31 @@ footer {
     text-align: center; /* Alinhamento do texto centralizado */
 }
 .ufsm, .ctism, .redes {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: 100px; /* Ajuste o tamanho conforme necessário */
+    width: 95px; /* Ajuste o tamanho conforme necessário */
+    height: 95px; /* Ajuste o tamanho conforme necessário */
     position: fixed; /* Posição fixa para manter os ícones na tela enquanto você rola */
-    top: 10px; /* Distância do topo da janela do navegador */
+    top: 30px; /* Distância do topo da janela do navegador */
     z-index: 10; /* Garante que os ícones estejam acima de outros elementos, se necessário */
+    animation-name: icondown; /* Nome da animação */
+    animation-duration: 1s; /* Duração da animação */
+    animation-timing-function: ease-out;
 }
 
 .ufsm {
-    right: 330px; /* Distância da borda direita da janela do navegador */
+    right: 260px; /* Distância da borda direita da janela do navegador */
 }
 
 .ctism {
-    right: 10px; /* Distância da borda direita da janela do navegador, para posicionar ao lado de ufsm */
+    right: 140px; /* Distância da borda direita da janela do navegador, para posicionar ao lado de ufsm */
 }
 
 .redes {
-    right: 170px; /* Distância da borda direita da janela do navegador, para posicionar ao lado de ctism */
+    right: 20px; /* Distância da borda direita da janela do navegador, para posicionar ao lado de ctism */
 }
 .logoroutelib {
     height: 400px;
     position: absolute;
-    top: -100px;          /* Corrigido com 'px' */
+    top: -110px;          /* Corrigido com 'px' */
     left: 100px;         /* Corrigido com 'px' */
     animation-name: logodown;
     animation-duration: 2s;
