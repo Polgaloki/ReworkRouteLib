@@ -1,15 +1,41 @@
+@keyframes circleup {
+    0% {
+        bottom: -1000px; /* Posição inicial fora da tela */
+    }
+    100% {
+        bottom: -500px; /* Posição final na tela, ajuste conforme necessário */
+    }
+}
+@keyframes notebookup {
+    0% {
+        bottom: -1000px; /* Posição inicial fora da tela */
+    }
+    100% {
+        bottom: 100px; /* Posição final na tela, ajuste conforme necessário */
+    }
+}
+@keyframes logodown {
+    from {
+      opacity: 0;              /* Começa totalmente visível */
+      transform: translateY(0); /* Começa na posição inicial */
+    }
+    to {
+      opacity: 3;                  /* Termina totalmente transparente */
+      transform: translateY(20px); /* Move para baixo */
+    }
+  }
+
 *{
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
+     background-color: #3B6275;   /* #102229; */
     z-index: 5;
 
 /* Estilos para o cabeçalho */
 header {
-    background-color: #333; /* Cor de fundo do cabeçalho */
-    color: #fff; /* Cor do texto no cabeçalho */
+
     padding: 20px; /* Espaçamento interno do cabeçalho */
     text-align: center; /* Alinhamento do texto centralizado */
 }
@@ -21,9 +47,63 @@ header {
 
 /* Estilos para o rodapé */
 footer {
-    background-color: #333; /* Cor de fundo do rodapé */
+    background-color: #3B6275; /* Cor de fundo do rodapé */
     color: #fff; /* Cor do texto no rodapé */
     padding: 20px; /* Espaçamento interno do rodapé */
     text-align: center; /* Alinhamento do texto centralizado */
 }
+.logoroutelib {
+    height: 400px;
+    position: absolute;
+    top: -100px;          /* Corrigido com 'px' */
+    left: 100px;         /* Corrigido com 'px' */
+    animation-name: logodown;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; 
+    animation-timing-function: ease-out;
+}
+
+.texto{
+    position: absolute; 
+    top: 300px; 
+    left: 200px; 
+    color: #fff;
+
+}
+
+.notebook{
+    width: 800px;
+    height: 550px;
+    bottom: 100px; /* Inicialmente fora da tela */
+    right: 10px;
+    position: fixed; 
+    z-index: 7;
+    animation-name: notebookup;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+}
+    
+}
+.circle {
+    width: 1000px;
+    height: 1000px;
+    background-color: #32424B;
+    border-radius: 50%;
+    position: fixed;
+    bottom: -500px; /* Inicialmente fora da tela */
+    right: -500px;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    animation-name: circleup;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+}
+
 }

@@ -20,10 +20,10 @@
    nav.menu-lateral {
     width: 90px;
     height: 100%; /* Continua usando 100% da altura da viewport */
-    background-color: #333333;
+    background-color: #2B3033;
     padding: 50px 0 50px 1%;
-    box-shadow: 3px 0 0 #9e0c39;
-    position: fixed;
+    box-shadow: 3px 0 0 #357CA0;
+    position: absolute;
     top: 0;
     left: 0;
     overflow: hidden; /* Garante que o conteúdo extra não faça a barra lateral estender-se verticalmente */
@@ -54,7 +54,7 @@ nav.menu-lateral.expandir{
    }
    
    ul li.item-menu:hover{
-    background:#333333;
+    background:#2B3033;
     border-radius: 15px 0px 0px 15px
     
    }
@@ -64,7 +64,7 @@ nav.menu-lateral.expandir{
        border-radius: 15px 0px 0px 15px
    }
    ul li.ativo{
-       background-color: #e21b5a;
+       background-color: #3B6275;
    }
    
    ul li.item-menu a{
