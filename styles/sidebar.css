@@ -13,9 +13,16 @@
     filter: blur(0); /* Inicialmente sem desfoque */
     transition: filter 0.3s ease-in-out; /* Adiciona uma transição para o efeito de desfoque */
    }
-
    
    
+   .logocanto{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: -7;
+    z-index: 10;
+    
+}
 
    nav.menu-lateral {
     width: 90px;
@@ -38,7 +45,8 @@ nav.menu-lateral.expandir{
    .btn-expandir{
        width: 100%;
        padding-left: 10px;
-       padding: 10px 10px;
+       padding: 15px 10px;
+       margin-top: 30px;
    }
    
    .btn-expandir > i{
@@ -71,7 +79,7 @@ nav.menu-lateral.expandir{
     color:#fbffe3;
     text-decoration: none;
     font-size: 20px;
-    padding: 20px 4%;
+    padding: 15px 4%;
     display: flex;
     margin-bottom: 10px;
     line-height: 40px;

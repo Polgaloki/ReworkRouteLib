@@ -26,6 +26,8 @@
   }
 
 *{
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -34,10 +36,21 @@ body {
     z-index: 5;
 
 /* Estilos para o cabeçalho */
+
 header {
 
     padding: 20px; /* Espaçamento interno do cabeçalho */
     text-align: center; /* Alinhamento do texto centralizado */
+}
+
+
+.logocanto{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: -7;
+    z-index: 10;
+    
 }
 
 /* Estilos para o conteúdo principal */
@@ -51,6 +64,25 @@ footer {
     color: #fff; /* Cor do texto no rodapé */
     padding: 20px; /* Espaçamento interno do rodapé */
     text-align: center; /* Alinhamento do texto centralizado */
+}
+.ufsm, .ctism, .redes {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100px; /* Ajuste o tamanho conforme necessário */
+    position: fixed; /* Posição fixa para manter os ícones na tela enquanto você rola */
+    top: 10px; /* Distância do topo da janela do navegador */
+    z-index: 10; /* Garante que os ícones estejam acima de outros elementos, se necessário */
+}
+
+.ufsm {
+    right: 330px; /* Distância da borda direita da janela do navegador */
+}
+
+.ctism {
+    right: 10px; /* Distância da borda direita da janela do navegador, para posicionar ao lado de ufsm */
+}
+
+.redes {
+    right: 170px; /* Distância da borda direita da janela do navegador, para posicionar ao lado de ctism */
 }
 .logoroutelib {
     height: 400px;
