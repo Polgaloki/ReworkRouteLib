@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map-container {
+    margin-left: 90px;
+    height: 100%;
+    width: calc(100% - 90px);
+    position: relative;
+    z-index: 0;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#info {
+    display: flex;
+    flex-direction: column; /* Alinha os botões e a caixa verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    position: absolute;
+    top: 10px; /* Posiciona os botões na parte superior */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    background-color: rgba(138, 138, 138, 0.8);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row; /* Alinha os botões horizontalmente */
+    margin-bottom: 10px; /* Espaçamento entre os botões e a caixa */
+}
+
+.button, .delete {
+    margin: 0 10px; /* Espaçamento entre os botões */
+    padding: 10px 15px;
+    background-color: #316297;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #01172e;
+}
+
+.delete:hover {
+    background-color: #b30000;
+}
+
+#loader label {
+    cursor: pointer;
+}
+
+.box {
+    padding: 10px; /* Padding interno da caixa */
+    background-color: #d3d3d3; /* Cor de fundo da caixa */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Ajusta a largura conforme necessário */
+    text-align: center; /* Centraliza o texto */
+}

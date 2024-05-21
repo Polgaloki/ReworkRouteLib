@@ -1,0 +1,72 @@
+<htlm>
+    <head>
+        <title>Infra Gen</title>
+        <script src="infra_gen-master/src/dist/bundle.js" type="module"></script>
+        <link rel="stylesheet" href="infra_gen-master/src/styles/infra.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+        
+         <!-- SideBar -->
+         <link rel="stylesheet" href="/styles/sidebar.css">
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+         <!-- SearchBar --> 
+         <!-- SearchBox -->
+        
+
+    </head> 
+    <body>
+        
+
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="info">
+                <div class="buttons">
+                    <div id="loader" class="button" onclick="document.getElementById('file_entry').click();">
+                        <input type="file" id="file_entry" style="display: none;">
+                        <label>Load nodes from CSV</label>
+                    </div>
+                    <div id="downloader" class="button">Download Graph as CSV</div>
+                    <div id="delete-node" class="delete">delete</div>
+                </div>
+                <div id="node-info-text" class="box">Nothing selected</div>
+            </div>
+        </div>
+        
+      
+            <!-- SideBar -->
+        <nav class="menu-lateral">
+            <div class="btn-expandir"> 
+               <i class="bi bi-list" id="btn-exp"></i>
+            </div>
+            <ul>
+               <li class="item-menu ativo">        
+                <a href="home.html" id="home"> 
+                   <span class="icon"><i class="bi bi-house"></i></span>
+                   <span class="txt-link">Home</span>
+                </a>
+               </li>
+               <li class="item-menu">        
+                    <a href="index.html" id="mapa">
+                      <span class="icon"><i class="bi bi-map"></i></span>
+                      <span class="txt-link">Mapa</span>
+                   </a>
+                  </li>
+                
+                  </li>
+                  <li class="item-menu">        
+                   <a href="info.html" id="info2">
+                      <span class="icon"><i class="bi bi-info-circle"></i></span>
+                      <span class="txt-link">Info</span>
+                   </a>
+                  </li>
+            </ul>   
+           
+           </nav>
+           <script src="/scripts/sidebar.js"></scrwindow.location.href>
+           <script src="/scripts/transition.js"></scrip>
+           <!-- Script SideBar -->
+
+        </div>
+     
+        
+    </body>
+</htlm>

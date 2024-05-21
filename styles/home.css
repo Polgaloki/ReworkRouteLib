@@ -38,6 +38,21 @@
 *{
 
 
+    .infragen {
+        position: absolute;
+        top: 40%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .infragen a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 2em; /* Ajuste o tamanho do ícone conforme necessário */
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
