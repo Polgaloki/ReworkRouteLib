@@ -11,11 +11,25 @@ document.addEventListener("DOMContentLoaded", function(){
         fadeOutEffect('index.html');
     });
 
-    const infoLink = document.getElementById('info');
-    infoLink.addEventListener('click', function(event) {
+    const infra1Link = document.getElementById('infra1');
+    infra1Link.addEventListener('click', function(event) {
+        event.preventDefault();
+        fadeOutEffect('infragen.html');
+    });
+
+    const infra2Link = document.getElementById('infra2');
+    infra2Link.addEventListener('click', function(event) {
+        event.preventDefault();
+        fadeOutEffect('infra2.html');
+    });
+
+    const informaLink = document.getElementById('informa');
+    informaLink.addEventListener('click', function(event) {
         event.preventDefault();
         fadeOutEffect('info.html');
     });
+
+    
 
     function fadeOutEffect(destination) {
         const body = document.body;
@@ -23,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function(){
         setTimeout(function() {
             setTimeout(function() {
                 window.location.href = destination;
-            }, 500); // Tempo (em milissegundos) para aguardar antes de redirecionar
+            }, 700); // Tempo (em milissegundos) para aguardar antes de redirecionar
         }, 100); // Pequeno atraso para garantir que o desfoque seja aplicado antes da transição de opacidade
     }
 });

@@ -19,7 +19,7 @@ export class GraphNode {
         this.click_handler = click_handler;
         this.parent_map = map;
     }
-
+    // comentar essa parte para tirar arestas 
     connect_to(node: GraphNode) {
         if (node.id === this.id || node.neighs.includes(this) || this.neighs.includes(node)) {
             return

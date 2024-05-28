@@ -1,10 +1,8 @@
 body {
     background-color: #222831;
     color: white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 
 h3 {
     margin-top: 1em;
@@ -26,47 +24,77 @@ h3 {
 
 .select-container-container {
     position: absolute;
-    top: 700px; /* Ajuste conforme necessário */
-    left: 700px; /* Ajuste conforme necessário */
-    z-index: 3; /* Garante que os balões fiquem acima do mapa */
-}
-.select-container-container {
-    position: fixed;
-    bottom: 0; /* Posiciona o contêiner na parte inferior */
-    left: 87;
-    width: 100%; /* Define a largura total */
+    bottom: 10px; /* Ajusta conforme necessário para posicionar na parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; /* Define a largura total */
     display: flex; /* Usa flexbox para centralizar os botões */
     justify-content: center; /* Centraliza horizontalmente */
     background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
-    padding: 20px 0; /* Adiciona espaço acima e abaixo dos botões */
+    padding: 20px;
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    z-index: 2; /* Garante que os balões fiquem acima do mapa */
 }
 
 .select-container {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 200px;
     margin: 0 10px; /* Adiciona margem entre os botões */
+}
+
+.select-container h4 {
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+.select-container select {
+    margin-bottom: 10px; /* Espaço entre o select e o botão */
 }
 
 .select-option-adder {
     height: 40px; /* Altura dos botões */
-    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo com transparência */
+    background-color: #3B6275; /* Cor de fundo com transparência */
     padding: 10px; /* Espaçamento interno */
     text-align: center;
     border-radius: 20px; /* Borda arredondada */
     cursor: pointer; /* Mostra o cursor de apontar */
+    color: #ffffff;;
 }
 
+.select-container .select-option-adder {
+    height: 40px;
+    background-color: #3B6275;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    margin: 0 10px; /* Espaçamento entre os botões */
+    transition: background-color 0.3s; /* Adiciona uma transição suave ao fundo ao passar o mouse */
+}
+
+.select-container .select-option-adder:hover {
+    background-color: #2B3033; /* Altera a cor de fundo ao passar o mouse */
+}
 
 .info-container {
-    margin-top: 5%;
+    position: absolute; /* Use absolute positioning */
+    top: 10px; /* Adjust as necessary to place it at the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center it horizontally */
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 10%;
-    width: 100%;
+    height: auto;
+    width: auto;
+    background-color:  rgba(0, 0, 0, 0.5);/* Adiciona um fundo com transparência para melhor visibilidade */
+    padding: 20px;
+    border-radius: 10px; /* Adiciona cantos arredondados */
+    z-index: 2; /* Ensure it stays above the map */
+    color: white;
 }
+
+
 
 .info-container > div {
     display: flex;
@@ -74,12 +102,15 @@ h3 {
     justify-content: center;
     font-size: large;
     height: 100%;
-    width: 15%;
-    margin-bottom: 5%;
-    margin-left: 2%;
-    margin-right: 2%;
-    padding: 5px;
+    width: auto;
+    margin: 0 10px; /* Ajusta a margem entre os itens */
+    padding: 10px;
     text-align: center;
+    background-color: #3B6275;/* Fundo semi-transparente para os itens */
+    border-radius: 5px; /* Cantos arredondados para os itens */
+}
+.info-container > div:hover {
+    background-color: #2B3033; /* Altera a cor de fundo ao passar o mouse */
 }
 
 .limit-container {
@@ -91,76 +122,4 @@ h3 {
 #file_container {
     display: none;
     /* display: flex; */
-    /* flex-direction: row; */
-    background-color: darkgreen;
-}
-
-#file_container > input {
-    margin-top: 10px;
-}
-
-#download {
-    background-color: darkblue;
-}
-
-#new-session-button {
-    background-color: darkred;
-}
-
-.select-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 25%;
-}
-
-.select-container-container {
-    display: flex;
-    flex-direction: row;
-}
-
-/* Container a */
-.select-container > select {
-    background-color: inherit;
-    height: 75%;
-    width: 60%;
-    margin-bottom: 1px;
-    border: 2px solid rgb(48, 48, 48);
-    color: white;
-    border-radius: 0px;
-    padding: 15px;
-}
-
-
-.select-container > select::selection {
-    background-color: rgb(0, 74, 14);
-}
-
-
-.select-option-adder {
-    height: 10%;
-    width: 20%;
-    background-color: rgb(71, 59, 52);
-    padding: 2px;
-    text-align: center;
-    margin-top: 10px
-}
-
-
-.loading-animation {
-  width: 10%;
-  height: 37.5%;
-  border: 3px solid #ccc;
-  border-top-color: #888;
-  border-radius: 50%;
-  animation: spin 1s infinite linear;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+    /* flex-direction: row;

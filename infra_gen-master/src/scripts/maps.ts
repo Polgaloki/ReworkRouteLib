@@ -8,7 +8,7 @@ async function initMap() {
         center: [-29.91113120515485, -50.70384997933515],
         zoom:10
     }
-
+     
     let map = L.map('map', map_opts)
     let layer = new L.TileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png');
     
@@ -17,7 +17,9 @@ async function initMap() {
     //const node_icon = new L.Icon({iconUrl: "http://localhost:3000/styles/images/poste_icon.png", iconSize: [35, 35]})
     const node_icon = new L.Icon({iconUrl: "infra_gen-master/src/styles/images/poste_icon.png", iconSize: [35, 35]})
     //const highlighted_icon = new L.Icon({iconUrl: "http://localhost:3000/styles/images/selected_poste_icon.png", iconSize: [35, 35]})
-    const highlighted_icon = new L.Icon({iconUrl: "infra_gen-master/src/styles/images/selected_poste_icon.png", iconSize: [35, 35]})
+    const highlighted_icon = new L.Icon({iconUrl: "/infra_gen-master/src/styles/images/selected_poste_icon.png", iconSize: [35, 35]})
+
+    L.Control.geocoder({ position: 'topright' }).addTo(map);
 
     document.getElementById("delete-node")?.addEventListener("click", () => {
         g.rm_selected();
