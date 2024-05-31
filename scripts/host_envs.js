@@ -1,2 +1,2 @@
-export const API_HOST = "http://localhost:1337"
+export const API_HOST = "https://oca.ctism.ufsm.br/routelibapi"
 export const SELF_HOST = "http://localhost:3000"
