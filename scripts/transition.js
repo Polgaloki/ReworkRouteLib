@@ -2,19 +2,19 @@ document.addEventListener("DOMContentLoaded", function(){
     const homeLink = document.getElementById('home');
     homeLink.addEventListener('click', function(event) {
         event.preventDefault();
-        fadeOutEffect('home.html');
+        fadeOutEffect('index.html');
     });
 
     const mapaLink = document.getElementById('mapa');
     mapaLink.addEventListener('click', function(event) {
         event.preventDefault();
-        fadeOutEffect('index.html');
+        fadeOutEffect('routelib.html');
     });
 
     const infra1Link = document.getElementById('infra1');
     infra1Link.addEventListener('click', function(event) {
         event.preventDefault();
-        fadeOutEffect('infragen.html');
+        fadeOutEffect('infra1.html');
     });
 
     const infra2Link = document.getElementById('infra2');

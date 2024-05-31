@@ -2,7 +2,7 @@ module.exports = {
     entry: './src/scripts/maps.ts',
     output: {
         filename: 'bundle.js',
-        path: "/home/arturcs/Documents/Routelib/infra_gen/src/dist",
+        path: __dirname + "/src/dist",
     },
     resolve: {
         extensions: ['.ts', '.js'],
